@@ -1,1 +1,1 @@
-![App image](AlbumsApp.png)
+![App image](./src/AlbumsApp.png)
