@@ -1,38 +1,84 @@
+/* General App styling */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2em;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Album styles */
+.Albums {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.Album {
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Album:hover {
+  transform: scale(1.05);
+}
+
+/* Pagination styles */
+.paginationButtons {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.paginationButtons li {
+  margin: 0 5px;
+}
+
+.paginationButtons a {
+  padding: 8px 16px;
+  border-radius: 3px;
+  border: 2px solid #333;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.paginationButtons a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.paginationActive a {
+  background-color: #333;
+  color: #fff;
+}
+
+.paginationDisabled a {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .Albums {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Album {
+    width: 80%;
   }
 }

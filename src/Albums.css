@@ -1,0 +1,58 @@
+/* General App styling */
+.App {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 20px;
+  }
+  
+  /* Album styles */
+  .Albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .Album {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Pagination styles */
+  .paginationButtons {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .paginationButtons li {
+    margin: 5px;
+  }
+  
+  .paginationButtons a {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .paginationActive a {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .paginationDisabled a {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Adjust more styles as needed */
+  
