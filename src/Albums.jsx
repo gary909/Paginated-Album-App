@@ -6,7 +6,7 @@ import './App.css'; // Make sure this path is correct based on your project stru
 const Albums = () => {
     const [albums, setAlbums] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
-    const itemsPerPage = 5;
+    const itemsPerPage = 25;
 
     useEffect(() => {
         const fetchAlbums = async () => {
@@ -25,10 +25,16 @@ const Albums = () => {
 
     const displayAlbums = albums
         .slice(pagesVisited, pagesVisited + itemsPerPage)
+        // .map((album) => (
+        //     <div key={album.id} className="Album">
+        //         {album.title}
+        //     </div>
+        // ));
         .map((album) => (
-            <div key={album.id} className="Album">
-                {album.title}
-            </div>
+            <tr key={album.id}>
+                <td>{album.id}</td>
+                <td>{album.title}</td>
+            </tr>
         ));
 
     const pageCount = Math.ceil(albums.length / itemsPerPage);
@@ -39,9 +45,17 @@ const Albums = () => {
 
     return (
         <div className="Albums">
-            <div className="AlbumsList">
-                {displayAlbums}
-            </div>
+            <table className="AlbumsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {displayAlbums}
+                </tbody>
+            </table>
             <div>
             <ReactPaginate
                 previousLabel={"Previous"}
